@@ -24,7 +24,7 @@ export function setupNexusConfig(builder: core.PluginBuilderLens): void {
         ? true
         : process.env.NEXUS_SHOULD_GENERATE_ARTIFACTS === 'false'
         ? false
-        : Boolean(!process.env.NODE_ENV || process.env.NODE_ENV === 'development')
+        : true
     builder.setConfigOption('shouldGenerateArtifacts', shouldGenerateArtifacts)
   }
   if (shouldGenerateArtifacts === false || outputs === false) {
