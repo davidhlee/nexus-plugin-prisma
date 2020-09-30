@@ -96,5 +96,8 @@
   "prisma": {
     "version": "de2bc1cbdb5561ad73d2f08463fa2eec48993f56"
   },
-  "prettier": "@prisma-labs/prettier-config"
+  "prettier": "@prisma-labs/prettier-config",
+  "precommit": [
+    "build"
+  ]
 }
