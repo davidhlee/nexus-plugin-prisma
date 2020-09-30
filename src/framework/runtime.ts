@@ -71,7 +71,7 @@ export const plugin: RuntimePlugin<Settings> = (settings) => (project) => {
             typegen: nexusPrismaTypegenOutput,
           },
           prismaClient: (ctx) => ctx.db,
-          shouldGenerateArtifacts: project.shouldGenerateArtifacts,
+          shouldGenerateArtifacts: true,
           onUnknownFieldName: (params) => renderUnknownFieldNameError(params),
           onUnknownFieldType: (params) => renderUnknownFieldTypeError(params),
           onUnknownArgName: (params) => renderUnknownArgName(params),
