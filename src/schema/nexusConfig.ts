@@ -17,7 +17,7 @@ export function setupNexusConfig(builder: core.PluginBuilderLens): void {
   } as const
 
   let outputs = builder.getConfigOption('outputs')
-  let shouldGenerateArtifacts = builder.getConfigOption('shouldGenerateArtifacts')
+  let shouldGenerateArtifacts = true
   if (!builder.hasConfigOption('shouldGenerateArtifacts')) {
     shouldGenerateArtifacts = true
     builder.setConfigOption('shouldGenerateArtifacts', shouldGenerateArtifacts)

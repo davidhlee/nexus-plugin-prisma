@@ -20,7 +20,7 @@ function setupNexusConfig(builder) {
         },
     };
     let outputs = builder.getConfigOption('outputs');
-    let shouldGenerateArtifacts = builder.getConfigOption('shouldGenerateArtifacts');
+    let shouldGenerateArtifacts = true;
     if (!builder.hasConfigOption('shouldGenerateArtifacts')) {
         shouldGenerateArtifacts = true;
         builder.setConfigOption('shouldGenerateArtifacts', shouldGenerateArtifacts);
