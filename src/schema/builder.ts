@@ -205,12 +205,7 @@ if (process.env.NEXUS_PRISMA_CLIENT_PATH) {
 }
 
 // NOTE This will be replaced by Nexus plugins once typegen integration is available.
-const shouldGenerateArtifacts =
-  process.env.NEXUS_SHOULD_GENERATE_ARTIFACTS === 'true'
-    ? true
-    : process.env.NEXUS_SHOULD_GENERATE_ARTIFACTS === 'false'
-    ? false
-    : true
+const shouldGenerateArtifacts = true
 
 const defaultOptions = {
   shouldGenerateArtifacts,
