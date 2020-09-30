@@ -22,12 +22,7 @@ function setupNexusConfig(builder) {
     let outputs = builder.getConfigOption('outputs');
     let shouldGenerateArtifacts = builder.getConfigOption('shouldGenerateArtifacts');
     if (!builder.hasConfigOption('shouldGenerateArtifacts')) {
-        shouldGenerateArtifacts =
-            process.env.NEXUS_SHOULD_GENERATE_ARTIFACTS === 'true'
-                ? true
-                : process.env.NEXUS_SHOULD_GENERATE_ARTIFACTS === 'false'
-                    ? false
-                    : true;
+        shouldGenerateArtifacts = true;
         builder.setConfigOption('shouldGenerateArtifacts', shouldGenerateArtifacts);
     }
     if (shouldGenerateArtifacts === false || outputs === false) {
